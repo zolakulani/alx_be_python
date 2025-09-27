@@ -6,11 +6,9 @@ def convert_to_celsius(fahrenheit):
     print(f'{fahrenheit}°F is {results:.2f}°C')
     
 def convert_to_fahrenheit(celsius):
-    # Try this pattern that matches what the check is looking for
     results = 32 + celsius * CELSIUS_TO_FAHRENHEIT_FACTOR
     print(f'{celsius}°C is {results:.2f}°F')
 
-# Add try-except block for ValueError handling
 try:
     user_input = float(input("Enter the temperature to convert: "))
     choice = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().lower() 
@@ -23,4 +21,4 @@ try:
         print("Invalid unit. Please enter C or F.")
         
 except ValueError:
-    print("Error: Please enter a valid number for the temperature.")
+    print("Invalid temperature. Please enter a numeric value.")
