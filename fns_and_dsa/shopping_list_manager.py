@@ -15,6 +15,7 @@ def main():
             # Prompt for and add an item
            item = input("Enter a name of item you want to put to shop list")
            shopping_list.append(item)
+           print(f"'{item}' added to the shopping list.")
         elif choice == 2:
             # Prompt for and remove an item
             item = input("What do you want to remove: ")
@@ -22,11 +23,12 @@ def main():
                 print(f'{item} not in Shopping List')
             else:
                 shopping_list.remove(item)
+                print(f"'{item}' revomed from the shopping list.")
                 
         elif choice == 3:
             # Display the shopping list
-            shopping = shopping_list
-            for item in shopping:
+            print("Shopping List:")
+            for item in shopping_list:
                 print(item)
         elif choice == 4:
             print("Goodbye!")
