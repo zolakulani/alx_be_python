@@ -10,7 +10,7 @@ class Rectangle(Shape):
         self.width = width
         
     def area(self):
-        return self.width * self.length
+        return self.length * self.width
     
     def __str__(self):
         return f"Rectangle({self.length}*{self.width})"
